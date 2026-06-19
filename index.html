@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgriTree — AI Plant Intelligence</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <span class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="var(--green-primary)"/>
+            <path d="M12 6c0 3.31-2.69 6-6 6 3.31 0 6 2.69 6 6 0-3.31 2.69-6 6-6-3.31 0-6-2.69-6-6z" fill="white"/>
+          </svg>
+        </span>
+        <span class="logo-text">AgriTree</span>
+      </div>
+
+      <!-- Center Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#community" class="nav-link">Community</a></li>
+      </ul>
+
+      <!-- CTA Button -->
+      <div class="nav-cta">
+        <a href="/assets/templates/plant_anylser_dashboard.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#features" class="mobile-nav-link">Features</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#community" class="mobile-nav-link">Community</a>
+      <a href="#" class="btn btn-primary" style="margin-top:12px;">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+
+      <!-- LEFT CONTENT -->
+      <div class="hero-left fade-in">
+        <!-- Badge -->
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <i class="fa-solid fa-leaf badge-icon"></i>
+          Next-Gen Plant Intelligence
+        </div>
+
+        <!-- Heading -->
+        <h1 class="hero-heading">
+          Identify Any Plant<br />
+          <span class="heading-accent">with AI Precision</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="hero-description">
+          Upload a plant photo and instantly discover plant details, care instructions, origin, and safety information using our proprietary botanical neural networks.
+        </p>
+
+        <!-- Buttons -->
+        <div class="hero-buttons">
+          <a href="/assets/templates/plant_anylser_dashboard.html" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-camera"></i>
+            Start Scanning
+          </a>
+          <a href="#features" class="btn btn-outline btn-lg">
+            Explore Features
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="hero-right fade-in fade-in-delay">
+        <!-- Glow Effect -->
+        <div class="hero-glow"></div>
+
+        <!-- Main Plant Image Card -->
+        <div class="hero-image-card">
+          <img
+            src="https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=500&q=80"
+            alt="Plant identified by AI"
+            class="hero-plant-img"
+          />
+          <!-- Image Overlay Gradient -->
+          <div class="image-overlay"></div>
+        </div>
+
+        <!-- Floating Top-Right Icon Card -->
+        <div class="float-card float-top-right floating-anim">
+          <div class="float-icon-circle">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="white" opacity="0.3"/>
+              <path d="M12 5c0 3.87-3.13 7-7 7 3.87 0 7 3.13 7 7 0-3.87 3.13-7 7-7-3.87 0-7-3.13-7-7z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Floating Bottom-Left Glass Card -->
+        <div class="float-card float-bottom-left glass-card-float floating-anim-reverse">
+          <div class="glass-card-inner">
+            <div class="glass-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="var(--green-primary)" stroke-width="2"/>
+                <path d="M12 8v4l3 3" stroke="var(--green-primary)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="glass-card-label">AI Analysis</div>
+              <div class="glass-card-value">0.4s</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Particles -->
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
+        <div class="particle p4"></div>
+      </div>
+
+    </div>
+
+    <!-- Decorative Background Blobs -->
+    <div class="hero-blob blob1"></div>
+    <div class="hero-blob blob2"></div>
+  </section>
+
+  <!-- ========== STATS SECTION ========== -->
+  <section class="stats" id="about">
+    <div class="container">
+      <div class="stats-grid">
+
+        <div class="stat-card fade-in">
+          <div class="stat-number" style="color: var(--green-primary)">99.8%</div>
+          <div class="stat-label">Accuracy Rate</div>
+        </div>
+
+        <div class="stat-card fade-in">
+          <div class="stat-number" style="color: var(--green-primary)">12M+</div>
+          <div class="stat-label">Plants Cataloged</div>
+        </div>
+
+        <div class="stat-card fade-in">
+          <div class="stat-number" style="color: var(--green-primary)">50k</div>
+          <div class="stat-label">Active Gardeners</div>
+        </div>
+
+        <div class="stat-card fade-in">
+          <div class="stat-number" style="color: var(--green-primary)">0.4s</div>
+          <div class="stat-label">Analysis Time</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES SECTION ========== -->
+  <section class="features" id="features">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section-header fade-in">
+        <h2 class="section-title">Intelligent Botanical Ecosystem</h2>
+        <p class="section-subtitle">
+          Our AI doesn't just name plants; it understands their biology, health, and environmental needs.
+        </p>
+      </div>
+
+      <!-- Features Grid Row 1 -->
+      <div class="features-grid-top">
+
+        <!-- Feature Card 1 -->
+        <div class="feature-card fade-in" id="about">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="3" width="20" height="14" rx="2" stroke="var(--green-primary)" stroke-width="1.8"/>
+              <path d="M8 21h8M12 17v4" stroke="var(--green-primary)" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="12" cy="10" r="3" stroke="var(--green-primary)" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Advanced Recognition</h3>
+          <p class="feature-desc">Industry-leading visual analysis identifies species from a single leaf, fruit, or stem with genomic-level precision.</p>
+        </div>
+
+        <!-- Center Feature — Plant Image -->
+        <div class="feature-card feature-card-center fade-in">
+          <div class="center-plant-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&q=80"
+              alt="Plant close up"
+              class="center-plant-img"
+            />
+            <div class="center-img-overlay"></div>
+            <!-- Floating data label -->
+            <div class="img-data-label">
+              <i class="fa-solid fa-circle-check" style="color:var(--green-primary)"></i>
+              <span>Monstera Deliciosa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature Card 3 -->
+        <div class="feature-card fade-in">
+          <div class="feature-icon" style="background: #fff0f0; border-color:#ffd6d6;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2a10 10 0 100 20A10 10 0 0012 2z" stroke="#e05555" stroke-width="1.8"/>
+              <path d="M12 8v4l3 2" stroke="#e05555" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Health Diagnostic</h3>
+          <p class="feature-desc">Instantly spot pests and diseases before they spread. Get immediate treatment protocols.</p>
+          <a href="#" class="feature-learn-more">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Features Grid Row 2 -->
+      <div class="features-grid-bottom">
+
+        <div class="feature-card fade-in" id="community">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="var(--green-primary)" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Smart Plant Care</h3>
+          <p class="feature-desc">Automated watering schedules and light requirements based on your local micro-climate.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="var(--green-primary)" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Real-time Analysis</h3>
+          <p class="feature-desc">Processing over 5,000 requests per minute with latency under 400ms across the globe.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="var(--green-primary)" stroke-width="1.8"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" stroke="var(--green-primary)" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Global Support</h3>
+          <p class="feature-desc">Detailed plant information translated into 40+ languages with regional cultural context.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS SECTION ========== -->
+  <section class="testimonials" id="community">
+    <div class="container">
+
+      <div class="section-header fade-in">
+        <h2 class="section-title">Trusted by Botanists</h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card fade-in">
+          <!-- Stars -->
+          <div class="stars">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "AgriTree has completely changed how we conduct field surveys. The accuracy in identifying rare sub-species is unparalleled."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="https://i.pravatar.cc/48?img=47" alt="Dr. Sarah Chen" />
+            </div>
+            <div class="author-info">
+              <div class="author-name">Dr. Sarah Chen</div>
+              <div class="author-role">Botanist Lead, Greenbase</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="stars">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "The disease detection alone saved my entire organic greenhouse last season. It caught a fungal blight before I could even see it."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="https://i.pravatar.cc/48?img=12" alt="Mark Thompson" />
+            </div>
+            <div class="author-info">
+              <div class="author-name">Mark Thompson</div>
+              <div class="author-role">Organic Farm Owner</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ SECTION ========== -->
+  <section class="faq" id="faq">
+    <div class="container">
+
+      <div class="section-header fade-in">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item fade-in open">
+          <button class="faq-question" aria-expanded="true">
+            <span>How accurate is the identification?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-up"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Our models are trained on over 12 million high-resolution botanical specimens. In optimal lighting conditions, we achieve an identification accuracy of 99.8% for all major plant families.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question" aria-expanded="false">
+            <span>Does it work without internet?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>AgriTree offers a lightweight offline model that covers 5,000+ common species. For full accuracy and our complete 12M+ plant database, an internet connection is recommended.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is the basic version free?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! The free tier includes 20 identifications per day, basic care tips, and community access. Pro plans unlock unlimited scans, health diagnostics, and API access.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box fade-in">
+        <!-- Glow orbs inside CTA -->
+        <div class="cta-orb cta-orb1"></div>
+        <div class="cta-orb cta-orb2"></div>
+
+        <h2 class="cta-heading">Start Your Garden Journey</h2>
+        <p class="cta-subtext">
+          Join thousands of plant enthusiasts and professionals who trust AgriTree Explorer for precise botanical data.
+        </p>
+        <a href="#" class="btn btn-primary btn-lg cta-btn">
+          Get Started Free
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom: 14px;">
+            <span class="logo-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="var(--green-primary)"/>
+                <path d="M12 6c0 3.31-2.69 6-6 6 3.31 0 6 2.69 6 6 0-3.31 2.69-6 6-6-3.31 0-6-2.69-6-6z" fill="white"/>
+              </svg>
+            </span>
+            <span class="logo-text">AgriTree</span>
+          </div>
+          <p class="footer-brand-desc">Precision in growth. The world's most advanced AI-powered botanical research tool.</p>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#">Botanical API</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 AgriTree Explorer. Precision in Growth.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
