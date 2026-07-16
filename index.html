@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" class="loading-active">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgriTree — AI-Powered Botanical Intelligence</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/loader.css" />
+  <!-- Google Fonts & Fontshare CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700,900&f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ========== PREMIUM TYPOGRAPHY LOADER ========== -->
+  <div class="neo-loader" id="neo-loader">
+    <div class="neo-loader-content">
+      <h1 class="neo-loader-title" id="neo-loader-title">AgriTree</h1>
+      <p class="neo-loader-subtitle" id="neo-loader-subtitle">Botanical Intelligence</p>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <span class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="var(--green-primary)"/>
+            <path d="M12 6c0 3.31-2.69 6-6 6 3.31 0 6 2.69 6 6 0-3.31 2.69-6 6-6-3.31 0-6-2.69-6-6z" fill="white"/>
+          </svg>
+        </span>
+        <span class="logo-text">AgriTree</span>
+      </div>
+
+      <!-- Center Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#ai-scan" class="nav-link">Edge Inference</a></li>
+        <li><a href="#plant-growth" class="nav-link">Growth Canvas</a></li>
+        <li><a href="#features" class="nav-link">Technology</a></li>
+        <li><a href="#disease-detection" class="nav-link">Diagnostics</a></li>
+        <li><a href="#community" class="nav-link">Partners</a></li>
+      </ul>
+
+      <!-- CTA Button -->
+      <div class="nav-cta">
+        <a href="/assets/templates/plant_anylser_dashboard.html" class="btn btn-primary btn-sm magnetic-btn">
+          <span>Launch Console</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#ai-scan" class="mobile-nav-link">Edge Inference</a>
+      <a href="#plant-growth" class="mobile-nav-link">Growth Canvas</a>
+      <a href="#features" class="mobile-nav-link">Technology</a>
+      <a href="#disease-detection" class="mobile-nav-link">Diagnostics</a>
+      <a href="#community" class="mobile-nav-link">Partners</a>
+      <a href="/assets/templates/plant_anylser_dashboard.html" class="btn btn-primary magnetic-btn" style="margin-top:12px; width:100%; justify-content:center;">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+
+      <!-- LEFT CONTENT -->
+      <div class="hero-left">
+        <!-- Badge -->
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <i class="fa-solid fa-leaf badge-icon"></i>
+          AI-Powered Plant Intelligence
+        </div>
+
+        <!-- Heading -->
+        <h1 class="hero-heading">
+          <span class="hero-title-line hero-title-main split-chars">Botanical Intelligence</span>
+          <span class="hero-title-line hero-title-accent heading-accent split-chars">at the Edge</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="hero-description split-lines">
+          Instantly classify species, analyze soil hydration, and diagnose botanical pathologies using our custom deep learning visual pipelines.
+        </p>
+
+        <!-- Buttons -->
+        <div class="hero-buttons">
+          <a href="/assets/templates/plant_anylser_dashboard.html" class="btn btn-primary btn-lg magnetic-btn">
+            <i class="fa-solid fa-camera"></i>
+            <span>Scan Specimen</span>
+            <i class="fa-solid fa-arrow-right btn-arrow"></i>
+          </a>
+          <a href="#features" class="btn btn-outline btn-lg magnetic-btn">
+            <span>Explore Technology</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="hero-right">
+        <!-- Glow Effect -->
+        <div class="hero-glow"></div>
+
+        <!-- Main Plant Image Card -->
+        <div class="hero-image-card">
+          <img
+            src="https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=500&q=80"
+            alt="Plant identified by AI"
+            class="hero-plant-img"
+          />
+          <!-- Image Overlay Gradient -->
+          <div class="image-overlay"></div>
+        </div>
+
+        <!-- Floating Top-Right Icon Card -->
+        <div class="float-card float-top-right">
+          <div class="float-icon-circle">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="white" opacity="0.3"/>
+              <path d="M12 5c0 3.87-3.13 7-7 7 3.87 0 7 3.13 7 7 0-3.87 3.13-7 7-7-3.87 0-7-3.13-7-7z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Floating Bottom-Left Glass Card -->
+        <div class="float-card float-bottom-left glass-card-float">
+          <div class="glass-card-inner">
+            <div class="glass-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="var(--green-primary)" stroke-width="2"/>
+                <path d="M12 8v4l3 3" stroke="var(--green-primary)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="glass-card-label">Edge Latency</div>
+              <div class="glass-card-value">0.4s</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Particles -->
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
+        <div class="particle p4"></div>
+      </div>
+
+    </div>
+
+    <!-- Decorative Background Blobs -->
+    <div class="hero-blob blob1"></div>
+    <div class="hero-blob blob2"></div>
+  </section>
+
+  <!-- ========== AI SCAN SHOWCASE (PINNED SECTION) ========== -->
+  <section class="ai-scan-section" id="ai-scan">
+    <div class="pin-wrapper">
+      <div class="scan-container">
+        <!-- Visual display of scanning -->
+        <div class="scan-visual-wrapper">
+          <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?w=800&q=80" alt="Plant leaf for scan" class="scan-leaf-image" />
+          <div class="scan-overlay"></div>
+          <!-- The sweeping laser bar -->
+          <div class="laser-bar"></div>
+          
+          <!-- Bounding Boxes and Labels that show up on scan -->
+          <div class="scan-hotspot" id="hotspot-leaf" style="top: 30%; left: 45%;">
+            <div class="hotspot-ring"></div>
+            <div class="hotspot-tooltip">Monstera Deliciosa (Healthy)</div>
+          </div>
+          <div class="scan-hotspot" id="hotspot-node" style="top: 55%; left: 35%;">
+            <div class="hotspot-ring"></div>
+            <div class="hotspot-tooltip">Stem Node</div>
+          </div>
+          
+          <!-- Live Scan Status Box -->
+          <div class="scan-badge">
+            <span class="scan-badge-pulse"></span>
+            <span class="scan-badge-text">EDGE_INFERENCE // CORE_BIOMETRICS</span>
+          </div>
+        </div>
+
+        <!-- Info panel and real-time terminal diagnostics -->
+        <div class="scan-info-wrapper">
+          <div class="scan-badge-label">Neural Engine v4.5</div>
+          <h2 class="scan-title split-words">Optical Edge Inference</h2>
+          <p class="scan-description split-lines">
+            Our custom computer vision model analyzes leaf margins, venation geometry, and chlorophyll absorption profiles in real time directly on device. Millisecond latency, infinite precision.
+          </p>
+          
+          <!-- Diagnostics console display -->
+          <div class="console-box">
+            <div class="console-header">
+              <span class="console-dot red"></span>
+              <span class="console-dot yellow"></span>
+              <span class="console-dot green"></span>
+              <span class="console-title">edge_inference.log</span>
+            </div>
+            <div class="console-body" id="console-logs">
+              <div class="console-line">> [INIT] Booting AgriTree optical neural core...</div>
+              <div class="console-line">> [OK] Camera pipeline active (60fps)</div>
+              <div class="console-line">> [RUN] Profiling surface geometry & venation...</div>
+              <div class="console-line">> [RUN] Matching venation signature</div>
+              <div class="console-line">> [DB] Querying 12M+ catalog specimens...</div>
+              <div class="console-line success">> [SUCCESS] Monstera Deliciosa (99.8% Conf.)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PLANT GROWTH SHOWCASE (PINNED CANVAS SECTION) ========== -->
+  <section class="plant-growth-section" id="plant-growth">
+    <div class="growth-canvas-container">
+      <!-- HTML5 Canvas for frame-by-frame rendering -->
+      <canvas id="growth-canvas"></canvas>
+
+      <!-- Center overlay text slides (only one visible at a time) -->
+      <div class="growth-text-overlay">
+        <!-- Stage 1 -->
+        <div class="growth-slide" id="growth-stage-1">
+          <div class="stage-number">01</div>
+          <h3 class="stage-title split-words">Germination Diagnostics</h3>
+          <p class="stage-desc split-lines">
+            Computer vision tracks radicle extension and soil moisture coefficients during early cellular expansion.
+          </p>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="growth-slide" id="growth-stage-2">
+          <div class="stage-number">02</div>
+          <h3 class="stage-title split-words">Chlorophyll Synthesis</h3>
+          <p class="stage-desc split-lines">
+            Real-time surface analysis measures canopy expansion, leaf-angle distribution, and transpiration indices.
+          </p>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="growth-slide" id="growth-stage-3">
+          <div class="stage-number">03</div>
+          <h3 class="stage-title split-words">Reproductive Bloom</h3>
+          <p class="stage-desc split-lines">
+            AI models analyze bud morphology and color saturation profiles to estimate yield yields and identify peak bloom periods.
+          </p>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="growth-slide" id="growth-stage-4">
+          <div class="stage-number">04</div>
+          <h3 class="stage-title split-words">Subterranean Metrics</h3>
+          <p class="stage-desc split-lines">
+            Thermal imaging and capacitance sensor grids map underground moisture flow patterns and root expansion efficiency.
+          </p>
+        </div>
+      </div>
+
+      <!-- Vignette overlay for text contrast and premium look -->
+      <div class="growth-vignette"></div>
+
+      <!-- Luxury preloader panel -->
+      <div class="growth-loader" id="growth-loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">PRELOADING PLANT INTELLIGENCE <span id="load-progress">0%</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WAVE FEATURES SECTION (CINEMATIC S-CURVE PATH) ========== -->
+  <section class="wave-features" id="features">
+    <div class="wave-viewport">
+      
+      <!-- Premium Editorial Sticky Header -->
+      <div class="wave-header">
+        <div class="wave-badge">
+          <span class="badge-dot"></span>
+          <i class="fa-solid fa-leaf badge-icon"></i>
+          Botanical Intelligence Ecosystem
+        </div>
+        <h2 class="wave-heading split-words">The AgriTree Intelligence</h2>
+        <p class="wave-description split-lines">
+          Scroll down to discover our five-core AI pipeline tracing the organic path of botanical life.
+        </p>
+      </div>
+
+      <!-- Large panning track container -->
+      <div class="wave-track">
+        <!-- Connecting SVG Path -->
+        <svg class="wave-svg-container" viewBox="0 0 2500 2000" fill="none" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="wave-gradient" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#12a869" />
+              <stop offset="50%" stop-color="#0f8f5b" />
+              <stop offset="100%" stop-color="#26de81" />
+            </linearGradient>
+            <!-- Stylized leaf definition -->
+            <g id="svg-leaf">
+              <path d="M 0 0 Q 15 -12, 30 0 Q 15 12, 0 0 Z" fill="url(#wave-gradient)" />
+              <path d="M 0 0 Q 15 -1, 30 0" stroke="rgba(255, 255, 255, 0.4)" stroke-width="0.5" fill="none" />
+            </g>
+          </defs>
+
+          <!-- Backing soft vine path -->
+          <path class="wave-svg-path-back" d="M 2000 300 C 1700 350, 1600 500, 1450 700 C 1300 900, 1300 950, 1250 1040 C 1200 1130, 1200 1180, 1050 1380 C 900 1580, 800 1650, 500 1700" />
+          
+          <!-- Secondary curling tendril 1 -->
+          <path class="wave-tendril" d="M 1800 450 Q 1700 400, 1620 480" stroke="rgba(15, 143, 91, 0.15)" stroke-width="2" fill="none" stroke-linecap="round" />
+          
+          <!-- Secondary curling tendril 2 -->
+          <path class="wave-tendril" d="M 1300 900 Q 1200 850, 1220 980" stroke="rgba(15, 143, 91, 0.15)" stroke-width="2" fill="none" stroke-linecap="round" />
+          
+          <!-- Secondary curling tendril 3 -->
+          <path class="wave-tendril" d="M 980 1480 Q 900 1500, 880 1580" stroke="rgba(15, 143, 91, 0.15)" stroke-width="2" fill="none" stroke-linecap="round" />
+
+          <!-- Interactive animated path (stroke drawn on scroll) -->
+          <path class="wave-svg-path-front" id="wavePath" d="M 2000 300 C 1700 350, 1600 500, 1450 700 C 1300 900, 1300 950, 1250 1040 C 1200 1130, 1200 1180, 1050 1380 C 900 1580, 800 1650, 500 1700" />
+
+          <!-- Loop-animated light trail pulse path -->
+          <path class="wave-light-trail" d="M 2000 300 C 1700 350, 1600 500, 1450 700 C 1300 900, 1300 950, 1250 1040 C 1200 1130, 1200 1180, 1050 1380 C 900 1580, 800 1650, 500 1700" />
+
+          <!-- Stylized leaves growing along the vine -->
+          <use href="#svg-leaf" x="1850" y="380" transform="rotate(-30, 1850, 380) scale(1.3)" />
+          <use href="#svg-leaf" x="1650" y="480" transform="rotate(10, 1650, 480) scale(0.95)" />
+          <use href="#svg-leaf" x="1380" y="800" transform="rotate(-45, 1380, 800) scale(1.2)" />
+          <use href="#svg-leaf" x="1290" y="930" transform="rotate(130, 1290, 930) scale(1.0)" />
+          <use href="#svg-leaf" x="1150" y="1220" transform="rotate(-25, 1150, 1220) scale(1.25)" />
+          <use href="#svg-leaf" x="930" y="1420" transform="rotate(40, 930, 1420) scale(1.05)" />
+          <use href="#svg-leaf" x="700" y="1610" transform="rotate(-15, 700, 1610) scale(1.3)" />
+          <use href="#svg-leaf" x="550" y="1680" transform="rotate(150, 550, 1680) scale(1.0)" />
+        </svg>
+
+        <!-- Dynamic background botanical glows -->
+        <div class="botanical-glow glow-1"></div>
+        <div class="botanical-glow glow-2"></div>
+        <div class="botanical-glow glow-3"></div>
+        <div class="botanical-glow glow-4"></div>
+
+        <!-- Floating ambient particles -->
+        <div class="ambient-particle ap-1"></div>
+        <div class="ambient-particle ap-2"></div>
+        <div class="ambient-particle ap-3"></div>
+        <div class="ambient-particle ap-4"></div>
+        <div class="ambient-particle ap-5"></div>
+        <div class="ambient-particle ap-6"></div>
+
+        <!-- Card 1: Species Identification (Top-Right) -->
+        <div class="wave-card wave-card-1" data-card="1">
+          <div class="card-glow"></div>
+          <div class="wave-card-icon">
+            <i class="fa-solid fa-dna"></i>
+          </div>
+          <h3 class="wave-card-title">Species Identification</h3>
+          <p class="wave-card-desc">
+            Instantly identify 12 million+ botanical species. Our proprietary computer vision models scan leaf serrations, node geometries, and bark venation signatures at the edge with 99.8% precision.
+          </p>
+          <div class="wave-card-number">01</div>
+        </div>
+
+        <!-- Card 2: Neural Diagnostics (Upper Center-Right) -->
+        <div class="wave-card wave-card-2" data-card="2">
+          <div class="card-glow"></div>
+          <div class="wave-card-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="wave-card-title">Neural Diagnostics</h3>
+          <p class="wave-card-desc">
+            Spot crop infections, leaf spot anomalies, and chlorosis early. The AI diagnoses pathogen strains in real-time, delivering targeted biochemical mitigation treatments in 400ms.
+          </p>
+          <div class="wave-card-number">02</div>
+        </div>
+
+        <!-- Card 3: Growth Forecasting (Center) -->
+        <div class="wave-card wave-card-3" data-card="3">
+          <div class="card-glow"></div>
+          <div class="wave-card-icon">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="wave-card-title">Growth Forecasting</h3>
+          <p class="wave-card-desc">
+            Predict crop height and foliage yield. AgriTree runs millions of plant growth simulations, factoring in local solar indices, biomass ratios, and dynamic atmospheric hydration levels.
+          </p>
+          <div class="wave-card-number">03</div>
+        </div>
+
+        <!-- Card 4: Ecological Mapping (Lower Center-Left) -->
+        <div class="wave-card wave-card-4" data-card="4">
+          <div class="card-glow"></div>
+          <div class="wave-card-icon">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3 class="wave-card-title">Ecological Mapping</h3>
+          <p class="wave-card-desc">
+            Map regional soil profiles. We fuse ground thermal signatures with satellite weather matrices to optimize moisture retention and chart localized micro-climate indices.
+          </p>
+          <div class="wave-card-number">04</div>
+        </div>
+
+        <!-- Card 5: Automated Cultivation (Bottom-Left) -->
+        <div class="wave-card wave-card-5" data-card="5">
+          <div class="card-glow"></div>
+          <div class="wave-card-icon">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <h3 class="wave-card-title">Automated Irrigation</h3>
+          <p class="wave-card-desc">
+            Automate greenhouse environments. The AgriTree AI dynamically adjusts intelligent drip sprinklers and lux levels based on localized botanical stress scores.
+          </p>
+          <div class="wave-card-number">05</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DISEASE DETECTION DEMO (PINNED SLIDER) ========== -->
+  <section class="disease-section" id="disease-detection">
+    <div class="pin-wrapper">
+      <div class="disease-container">
+        
+        <!-- Info Column -->
+        <div class="disease-info">
+          <div class="disease-badge"><i class="fa-solid fa-triangle-exclamation"></i> Pathogen Diagnosis</div>
+          <h2 class="disease-title split-words">Pathogen Diagnostics</h2>
+          <p class="disease-description split-lines">
+            Detect fungal blight, necrotic lesions, and nutrient deficiencies. AgriTree immediately delivers targeted chemical and organic treatment protocols.
+          </p>
+          
+          <div class="disease-details-box">
+            <div class="disease-detail-item active" id="detail-unscanned">
+              <div class="detail-marker red"></div>
+              <div>
+                <h4>Infection Detection</h4>
+                <p>Early necrotic margin yellowing detected via optical signature.</p>
+              </div>
+            </div>
+            <div class="disease-detail-item" id="detail-scanned">
+              <div class="detail-marker green"></div>
+              <div>
+                <h4>Diagnostic Treatment</h4>
+                <p>Early Fungal Blight confirmed. Application: <strong>Organic copper-sulfate spray</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Comparison Viewport -->
+        <div class="disease-visual-wrapper">
+          <div class="split-image-container">
+            <!-- Healthy Image (Base) -->
+            <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80" alt="Healthy plant leaf" class="leaf-img leaf-healthy" />
+            <div class="diagnosis-card healthy-card">
+              <div class="card-status"><i class="fa-solid fa-circle-check"></i> Healthy State</div>
+              <p class="card-text">Pathogen Cleared • Transpiration Normal</p>
+            </div>
+
+            <!-- Diseased Image (Overlay, width clipped on scroll) -->
+            <div class="diseased-overlay-wrapper">
+              <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80" alt="Diseased plant leaf" class="leaf-img leaf-diseased" />
+              <!-- Red spots and analysis markers in diseased overlay -->
+              <div class="blight-spores"></div>
+              <div class="disease-analysis-marker" style="top: 25%; left: 40%;">
+                <span class="pulse-ring-red"></span>
+                <span class="marker-label">Blight Spores</span>
+              </div>
+              <div class="disease-analysis-marker" style="top: 60%; left: 65%;">
+                <span class="pulse-ring-red"></span>
+                <span class="marker-label">Necrosis (84%)</span>
+              </div>
+              
+              <div class="diagnosis-card diseased-card">
+                <div class="card-status warning"><i class="fa-solid fa-triangle-exclamation"></i> Pathogen Confirmed</div>
+                <p class="card-text">Alternaria Solani • Severity 84%</p>
+              </div>
+            </div>
+
+            <!-- The Vertical Slider Divider Line -->
+            <div class="slider-divider">
+              <div class="slider-handle">
+                <i class="fa-solid fa-arrows-left-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS SECTION ========== -->
+  <section class="stats" id="about">
+    <div class="container">
+      <div class="stats-grid">
+
+        <div class="stat-card">
+          <div class="stat-number" style="color: var(--green-primary)">99.8%</div>
+          <div class="stat-label">Accuracy Rate</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number" style="color: var(--green-primary)">12M+</div>
+          <div class="stat-label">Specimens Processed</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number" style="color: var(--green-primary)">50k</div>
+          <div class="stat-label">Greenhouses Connected</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number" style="color: var(--green-primary)">0.4s</div>
+          <div class="stat-label">Inference Time</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS SECTION (PINNED HORIZONTAL SCROLL) ========== -->
+  <section class="testimonials" id="community">
+    <div class="testimonials-sticky-wrapper">
+      <div class="testimonials-header">
+        <h2 class="section-title split-words">Trusted by Botanists</h2>
+        <p class="section-subtitle split-lines">How plant enthusiasts, greenhouse operators, and researchers scale with AgriTree.</p>
+      </div>
+      
+      <!-- Viewport area for horizontal track -->
+      <div class="testimonials-viewport">
+        <div class="testimonials-horizontal-track">
+          
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <span class="card-quote-mark">&ldquo;</span>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote split-lines">
+              "AgriTree revolutionized our ecological field studies. Cataloging rare sub-species on-device has reduced classification time by over 80%."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://i.pravatar.cc/48?img=47" alt="Dr. Sarah Chen" />
+              </div>
+              <div class="author-info">
+                <div class="author-name">Dr. Sarah Chen</div>
+                <div class="author-role">Botanist Lead, Greenbase</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card">
+            <span class="card-quote-mark">&ldquo;</span>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote split-lines">
+              "The pathogen detection pipeline caught early Alternaria in our tomato crop before visual symptoms manifested, saving our entire yield."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://i.pravatar.cc/48?img=12" alt="Mark Thompson" />
+              </div>
+              <div class="author-info">
+                <div class="author-name">Mark Thompson</div>
+                <div class="author-role">Organic Farm Owner</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <span class="card-quote-mark">&ldquo;</span>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="testimonial-quote split-lines">
+              "The micro-climate automation is incredible. Our greenhouse irrigation profiles sync directly with local solar metrics, keeping stress index at zero."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://i.pravatar.cc/48?img=22" alt="Elena Rostova" />
+              </div>
+              <div class="author-info">
+                <div class="author-name">Elena Rostova</div>
+                <div class="author-role">Indoor Plant Enthusiast</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="testimonial-card">
+            <span class="card-quote-mark">&ldquo;</span>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote split-lines">
+              "Integrating the AgriTree API into our smart valve arrays reduced water consumption by 32% while maintaining optimal chlorophyll density."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://i.pravatar.cc/48?img=60" alt="James Miller" />
+              </div>
+              <div class="author-info">
+                <div class="author-name">James Miller</div>
+                <div class="author-role">Operations Manager, BioFlora</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ SECTION (AUTO OPEN ACCORDION ON SCROLL) ========== -->
+  <section class="faq" id="faq">
+    <div class="container">
+
+      <div class="section-header">
+        <h2 class="section-title split-words">Technical FAQ</h2>
+        <p class="section-subtitle split-lines">Get answers to common integration questions regarding our on-device edge pipelines.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <!-- FAQ Item 1 -->
+        <div class="faq-item open" id="faq-1">
+          <button class="faq-question" aria-expanded="true">
+            <span>What models power the identification pipeline?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-up"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>We employ custom Convolutional Neural Networks (CNNs) trained on over 12 million high-resolution specimens. This achieves 99.8% precision across 40,000+ plant species.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item" id="faq-2">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can the models run offline at the edge?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. We compile quantized ONNX models to run locally on iOS, Android, and embedded devices, supporting offline species classification and basic diagnostics.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item" id="faq-3">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is the developer API pricing model?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Our API starts with a free hobbyist tier (1,000 calls/mo). Production contracts use usage-based pricing with dedicated cluster hosting and sub-100ms response guarantees.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION (CONVERGING GRAPHICS) ========== -->
+  <section class="cta-section">
+    <!-- Floating background cards that converge -->
+    <div class="cta-particle-card card-tl"><i class="fa-solid fa-seedling"></i> Seedling</div>
+    <div class="cta-particle-card card-tr"><i class="fa-solid fa-dna"></i> Genetics</div>
+    <div class="cta-particle-card card-bl"><i class="fa-solid fa-temperature-half"></i> 24°C</div>
+    <div class="cta-particle-card card-br"><i class="fa-solid fa-droplet"></i> 65%</div>
+
+    <div class="container">
+      <div class="cta-box">
+        <!-- Glow orbs inside CTA -->
+        <div class="cta-orb cta-orb1"></div>
+        <div class="cta-orb cta-orb2"></div>
+
+        <h2 class="cta-heading split-chars">Integrate Botanical Intel</h2>
+        <p class="cta-subtext split-lines">
+          Unlock agricultural automation. Integrate our edge diagnostics API or connect your smart greenhouse systems today.
+        </p>
+        <a href="/assets/templates/plant_anylser_dashboard.html" class="btn btn-primary btn-lg cta-btn magnetic-btn">
+          <span>Request API Access</span>
+          <i class="fa-solid fa-arrow-right btn-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom: 14px;">
+            <span class="logo-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="var(--green-primary)"/>
+                <path d="M12 6c0 3.31-2.69 6-6 6 3.31 0 6 2.69 6 6 0-3.31 2.69-6 6-6-3.31 0-6-2.69-6-6z" fill="white"/>
+              </svg>
+            </span>
+            <span class="logo-text">AgriTree</span>
+          </div>
+          <p class="footer-brand-desc">Precision in growth. The world's most advanced AI-powered botanical research tool.</p>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#">Botanical API</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#community">Community</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 AgriTree Explorer. Precision in Growth.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <!-- GSAP Core & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- SplitType for Typography Staggers -->
+  <script src="https://unpkg.com/split-type"></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- Custom Script -->
+  <script src="/assets/js/script.js"></script>
+  <!-- Fullscreen Typography Loader Script -->
+  <script src="/assets/js/loader.js"></script>
+</body>
+</html>
