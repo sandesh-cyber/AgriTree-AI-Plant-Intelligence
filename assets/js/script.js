@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById("growth-canvas");
   const context = canvas ? canvas.getContext("2d") : null;
   const frameCount = 240;
-  const currentFrame = index => `/assets/images/plant-frames/frame_${String(index + 1).padStart(4, '0')}.png`;
+  const currentFrame = index => `assets/images/plant-frames/frame_${String(index + 1).padStart(4, '0')}.png`;
   
   const images = [];
   const airtree = { frame: 0 };
