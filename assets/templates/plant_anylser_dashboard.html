@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriTree — Plant Analyzer Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/plant_analyzer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ========== APP WRAPPER ========== -->
+    <div class="app-wrapper">
+      <!-- ========== LEFT SIDEBAR ========== -->
+      <aside class="sidebar" id="sidebar">
+        <!-- Logo -->
+        <div class="sidebar-logo">
+          <span class="sidebar-logo-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"
+                fill="var(--green-primary)"
+              />
+              <path
+                d="M12 6c0 3.31-2.69 6-6 6 3.31 0 6 2.69 6 6 0-3.31 2.69-6 6-6-3.31 0-6-2.69-6-6z"
+                fill="white"
+              />
+            </svg>
+          </span>
+          <span class="sidebar-logo-text">AgriTree</span>
+        </div>
+
+        <!-- Nav Menu -->
+        <nav class="sidebar-nav" role="navigation" aria-label="Main navigation">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-tooltip="Dashboard">
+                <span class="nav-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <rect
+                      x="3"
+                      y="3"
+                      width="7"
+                      height="7"
+                      rx="1.5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                    <rect
+                      x="14"
+                      y="3"
+                      width="7"
+                      height="7"
+                      rx="1.5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                    <rect
+                      x="3"
+                      y="14"
+                      width="7"
+                      height="7"
+                      rx="1.5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                    <rect
+                      x="14"
+                      y="14"
+                      width="7"
+                      height="7"
+                      rx="1.5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                  </svg>
+                </span>
+                <span class="nav-label">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a href="#" class="nav-link" data-tooltip="Identify">
+                <span class="nav-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="3"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                    <path
+                      d="M3 12h2M19 12h2M12 3v2M12 19v2"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M5.6 5.6l1.4 1.4M16.9 16.9l1.5 1.5M5.6 18.4l1.4-1.4M16.9 7.1l1.5-1.5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <span class="nav-label">Identify</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-tooltip="My Garden">
+                <span class="nav-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 22V12M12 12C12 7 7 4 3 5c1 4 4 7 9 7zM12 12C12 7 17 4 21 5c-1 4-4 7-9 7z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span class="nav-label">My Garden</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-tooltip="AI Assistant">
+                <span class="nav-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 2a10 10 0 110 20A10 10 0 0112 2z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                    <path
+                      d="M8 14s1.5 2 4 2 4-2 4-2"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <circle cx="9" cy="10" r="1" fill="currentColor" />
+                    <circle cx="15" cy="10" r="1" fill="currentColor" />
+                  </svg>
+                </span>
+                <span class="nav-label">AI Assistant</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Spacer -->
+        <div class="sidebar-spacer"></div>
+
+        <!-- AI Support Card -->
+        <div class="ai-support-card">
+          <div class="ai-support-header">
+            <span class="ai-support-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
+                  stroke="var(--green-primary)"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <span class="ai-support-title">AI Ready</span>
+          </div>
+          <p class="ai-support-desc">
+            Ask me anything about your garden health or plant species.
+          </p>
+          <button class="btn-chat-now">Chat Now</button>
+        </div>
+
+        <!-- Bottom Actions -->
+        <div class="sidebar-bottom">
+          <div class="sidebar-divider"></div>
+          <a href="#" class="sidebar-action">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="3"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+              <path
+                d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span>Settings</span>
+          </a>
+          <a href="#" class="sidebar-action">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Mobile Sidebar Toggle -->
+      <button
+        class="sidebar-toggle"
+        id="sidebarToggle"
+        aria-label="Toggle sidebar"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- ========== MAIN CONTENT ========== -->
+      <main class="main-content" id="mainContent">
+        <!-- ========== TOP HEADER ========== -->
+        <header class="dashboard-header fade-in">
+          <div class="header-left">
+            <h1 class="page-title">Plant Analyzer</h1>
+            <p class="page-subtitle">Identify and diagnose with precision.</p>
+          </div>
+          <div class="header-right">
+            <!-- Category Toggle Pills -->
+            <div class="category-pills" role="group" aria-label="User category">
+              <button class="pill" data-category="child">Child</button>
+              <button class="pill" data-category="farmer">Farmer</button>
+              <button class="pill active" data-category="gardener">
+                Gardener
+              </button>
+              <button class="pill" data-category="home">Home User</button>
+            </div>
+          </div>
+        </header>
+
+        <!-- ========== TOP ROW: UPLOAD + LIVE PREVIEW ========== -->
+        <div class="top-row">
+          <!-- Image Upload Section -->
+          <div class="upload-card fade-in" id="uploadCard">
+            <div class="upload-zone" id="uploadZone">
+              <!-- Upload Icon -->
+              <div class="upload-icon-wrap">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 16V4M12 4l-3 3M12 4l3 3"
+                    stroke="var(--green-primary)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 16v3a2 2 0 002 2h14a2 2 0 002-2v-3"
+                    stroke="var(--green-primary)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="12" cy="4" r="0" fill="none" />
+                </svg>
+                <div class="upload-icon-ring"></div>
+              </div>
+
+              <h2 class="upload-title">Drag & Drop Image</h2>
+              <p class="upload-desc">
+                Upload a clear photo of the leaves or stem<br />for the most
+                accurate analysis.
+              </p>
+
+              <!-- Hidden file input -->
+              <input type="file" id="fileInput" accept="image/*" hidden />
+
+              <div class="upload-buttons">
+                <button class="btn-select-files" id="selectFilesBtn">
+                  Select Files
+                </button>
+                <button class="btn-scan-plant" id="scanPlantBtn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="3"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 9V5a2 2 0 012-2h4M15 3h4a2 2 0 012 2v4M21 15v4a2 2 0 01-2 2h-4M9 21H5a2 2 0 01-2-2v-4"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  Scan Plant
+                </button>
+              </div>
+            </div>
+
+            <!-- Drag-over overlay -->
+            <div class="drag-overlay" id="dragOverlay">
+              <div class="drag-overlay-inner">
+                <i class="fa-solid fa-leaf"></i>
+                <p>Drop image here</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Preview Card -->
+          <div class="live-preview-card fade-in fade-delay-1">
+            <div class="live-preview-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1545241047-6083a3684587?w=500&q=80"
+                alt="Monstera leaf close-up"
+                class="live-preview-img"
+                id="previewImage"
+              />
+              <div class="live-preview-overlay"></div>
+            </div>
+            <!-- Live Badge -->
+            <div class="live-badge">
+              <span class="live-dot"></span>
+              Live Preview
+            </div>
+            <!-- Bottom text -->
+            <div class="live-preview-bottom">
+              <p class="live-analysis-text">
+                Current Analysis: Leaf Structure Optimization
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- END TOP ROW -->
+
+        <!-- ========== MIDDLE ROW: ANALYSIS + GARDENER CARD ========== -->
+        <div class="middle-row">
+          <!-- ===== MAIN ANALYSIS CARD ===== -->
+          <div class="analysis-card fade-in">
+            <!-- Analysis Top Bar -->
+            <div class="analysis-top-bar">
+              <div class="analysis-meta">
+                <span class="top-match-badge">TOP MATCH</span>
+                <span class="analysis-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="var(--text-muted)"
+                      stroke-width="1.8"
+                    />
+                    <path
+                      d="M12 7v5l3 3"
+                      stroke="var(--text-muted)"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  Analyzed 2.4s ago
+                </span>
+              </div>
+              <!-- Match Percentage Circle -->
+              <div class="match-circle" id="matchCircle">
+                <svg
+                  class="match-svg"
+                  viewBox="0 0 60 60"
+                  width="70"
+                  height="70"
+                >
+                  <circle
+                    class="match-bg"
+                    cx="30"
+                    cy="30"
+                    r="26"
+                    fill="none"
+                    stroke="#e8f5ee"
+                    stroke-width="5"
+                  />
+                  <circle
+                    class="match-progress"
+                    cx="30"
+                    cy="30"
+                    r="26"
+                    fill="none"
+                    stroke="var(--green-primary)"
+                    stroke-width="5"
+                    stroke-dasharray="163.36"
+                    stroke-dashoffset="163.36"
+                    stroke-linecap="round"
+                    transform="rotate(-90 30 30)"
+                  />
+                </svg>
+                <div class="match-text">
+                  <span class="match-percent" id="confidenceScore"> 98% </span>
+                  <span class="match-label">MATCH</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Plant Name -->
+            <div class="plant-name-wrap">
+              <h2 class="plant-name" id="plantName">Plant Name</h2>
+            </div>
+            <p class="plant-subtitle" id="scientificName">Scientific Name</p>
+
+            <!-- Plant Info Tags -->
+            <div class="plant-tags">
+              <div class="plant-tag">
+                <span class="tag-label">FAMILY</span>
+                <span class="tag-value" id="family"> Araceae </span>
+              </div>
+              <div class="plant-tag">
+                <span class="tag-label">ORIGIN</span>
+                <span class="tag-value" id="origin">Central America</span>
+              </div>
+              <div class="plant-tag">
+                <span class="tag-label">TYPE</span>
+                <span class="tag-value">Evergreen Climber</span>
+              </div>
+              <div class="plant-tag toxicity">
+                <span class="tag-label">TOXICITY</span>
+                <span class="tag-value toxic" id="toxicity"> Toxic to Pets </span>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="plant-description">
+              <div class="description-header">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 12h6M9 16h4M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"
+                    stroke="var(--green-primary)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Description
+              </div>
+              <p class="description-text" id="description"> Plant description... </p>
+            </div>
+
+            <!-- Care Tips + Vitality -->
+            <div class="care-vitality-row">
+              <!-- Care Tips -->
+              <div class="care-tips-card">
+                <div class="care-tips-header">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                      stroke="var(--green-primary)"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Care Tips
+                </div>
+                <ul class="care-list">
+                  <li class="care-item">
+                    <span class="care-icon">
+                      <svg
+                        width="13"
+                        height="13"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="5"
+                          stroke="var(--green-primary)"
+                          stroke-width="1.8"
+                        />
+                        <path
+                          d="M12 2v2M12 20v2M2 12h2M20 12h2"
+                          stroke="var(--green-primary)"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </span>
+                    Indirect bright light
+                  </li>
+                  <li class="care-item">
+                    <span class="care-icon">
+                      <svg
+                        width="13"
+                        height="13"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M12 2C6 8 4 12 4 15a8 8 0 0016 0c0-3-2-7-8-13z"
+                          stroke="var(--green-primary)"
+                          stroke-width="1.8"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    Water every 1-2 weeks
+                  </li>
+                  <li class="care-item">
+                    <span class="care-icon">
+                      <svg
+                        width="13"
+                        height="13"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26A4.5 4.5 0 1014 14.76z"
+                          stroke="var(--green-primary)"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </span>
+                    Keep between 18°C – 30°C
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Vitality Status -->
+              <div class="vitality-card">
+                <div class="vitality-header">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M22 12h-4l-3 9L9 3l-3 9H2"
+                      stroke="var(--green-primary)"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Vitality Status
+                </div>
+                <div class="vitality-bar-wrap">
+                  <div class="vitality-bar-bg">
+                    <div
+                      class="vitality-bar-fill"
+                      id="vitalityBar"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                  <span class="vitality-percent">85% Health</span>
+                </div>
+                <p class="vitality-note">
+                  Optimal chlorophyll production detected. Minor dust on leaf
+                  surface noted.
+                </p>
+              </div>
+            </div>
+            <!-- END care-vitality-row -->
+          </div>
+          <!-- END ANALYSIS CARD -->
+
+          <!-- ===== RIGHT: GARDENER MODE + COMMUNITY ===== -->
+          <div class="right-panel">
+            <!-- Gardener Mode Card -->
+            <div class="gardener-card fade-in fade-delay-1">
+              <!-- Botanical SVG BG pattern -->
+              <div class="gardener-bg-pattern" aria-hidden="true">
+                <svg
+                  width="200"
+                  height="200"
+                  viewBox="0 0 200 200"
+                  fill="none"
+                  opacity="0.08"
+                >
+                  <path
+                    d="M100 10C100 10 60 50 60 100s40 90 40 90 40-40 40-90S100 10 100 10z"
+                    fill="white"
+                  />
+                  <path
+                    d="M30 60C30 60 70 70 90 100s10 70 10 70S20 130 30 60z"
+                    fill="white"
+                  />
+                  <path
+                    d="M170 60C170 60 130 70 110 100s-10 70-10 70S180 130 170 60z"
+                    fill="white"
+                  />
+                  <circle cx="100" cy="100" r="5" fill="white" />
+                </svg>
+              </div>
+
+              <h3 class="gardener-title">Gardener Mode</h3>
+              <p class="gardener-desc">
+                You are viewing advanced propagation and soil composition data.
+              </p>
+
+              <div class="gardener-divider"></div>
+
+              <div class="gardener-info-list">
+                <div class="gardener-info-item">
+                  <span class="gardener-info-label">Ideal Potting Mix</span>
+                  <span class="gardener-info-value">Peat/Perlite/Bark</span>
+                </div>
+                <div class="gardener-divider-light"></div>
+                <div class="gardener-info-item">
+                  <span class="gardener-info-label">Propagation Method</span>
+                  <span class="gardener-info-value">Node Cuttings</span>
+                </div>
+                <div class="gardener-divider-light"></div>
+                <div class="gardener-info-item">
+                  <span class="gardener-info-label">Fertilizer Cycle</span>
+                  <span class="gardener-info-value bold">Every 30 Days</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Community Card -->
+            <div class="community-card fade-in fade-delay-2">
+              <div class="community-header">
+                <h3 class="community-title">Community Trends</h3>
+                <span class="new-badge">NEW</span>
+              </div>
+
+              <div class="community-list">
+                <div class="community-item">
+                  <div class="community-avatar">
+                    <img src="https://i.pravatar.cc/40?img=47" alt="Liam G." />
+                  </div>
+                  <div class="community-text">
+                    <span class="community-name">Liam G. posted</span>
+                    <p class="community-quote">
+                      "My Monstera is finally putting out fenestrations?"
+                    </p>
+                  </div>
+                </div>
+                <div class="community-item">
+                  <div class="community-avatar">
+                    <img src="https://i.pravatar.cc/40?img=32" alt="Elena S." />
+                  </div>
+                  <div class="community-text">
+                    <span class="community-name">Elena S. asked</span>
+                    <p class="community-quote">
+                      "Yellow tips - too much water or lack of light?"
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn-join-discussion">Join Discussion</button>
+            </div>
+          </div>
+          <!-- END RIGHT PANEL -->
+        </div>
+        <!-- END MIDDLE ROW -->
+
+        <!-- ========== BOTTOM ROW: SIMILAR PLANTS + MAP ========== -->
+        <div class="bottom-row fade-in">
+          <!-- Similar Plant Card 1 -->
+          <div class="similar-card">
+            <div class="similar-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1612540139153-8f4e6afe6e4b?w=120&q=80"
+                alt="Monstera Adansonii"
+                class="similar-img"
+              />
+            </div>
+            <div class="similar-info">
+              <span class="similar-match">82% MATCH</span>
+              <h4 class="similar-name">Monstera Adansonii</h4>
+              <p class="similar-sub">Monkey Mask</p>
+            </div>
+            <button class="similar-arrow" aria-label="View Monstera Adansonii">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Similar Plant Card 2 -->
+          <div class="similar-card">
+            <div class="similar-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=120&q=80"
+                alt="Epipremnum Aureum"
+                class="similar-img"
+              />
+            </div>
+            <div class="similar-info">
+              <span class="similar-match">76% MATCH</span>
+              <h4 class="similar-name">Epipremnum Aureum</h4>
+              <p class="similar-sub">Golden Pothos</p>
+            </div>
+            <button class="similar-arrow" aria-label="View Epipremnum Aureum">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Native Habitat Map Card -->
+          <div class="map-card fade-in fade-delay-1">
+            <div class="map-label-top">NATIVE HABITAT</div>
+            <div class="map-visual">
+              <!-- SVG Simplified Map of Central America -->
+              <svg
+                viewBox="0 0 300 200"
+                class="map-svg"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Background -->
+                <rect width="300" height="200" fill="#f0f7f2" rx="12" />
+                <!-- Grid lines -->
+                <line
+                  x1="0"
+                  y1="50"
+                  x2="300"
+                  y2="50"
+                  stroke="#d4e8da"
+                  stroke-width="0.5"
+                />
+                <line
+                  x1="0"
+                  y1="100"
+                  x2="300"
+                  y2="100"
+                  stroke="#d4e8da"
+                  stroke-width="0.5"
+                />
+                <line
+                  x1="0"
+                  y1="150"
+                  x2="300"
+                  y2="150"
+                  stroke="#d4e8da"
+                  stroke-width="0.5"
+                />
+                <line
+                  x1="75"
+                  y1="0"
+                  x2="75"
+                  y2="200"
+                  stroke="#d4e8da"
+                  stroke-width="0.5"
+                />
+                <line
+                  x1="150"
+                  y1="0"
+                  x2="150"
+                  y2="200"
+                  stroke="#d4e8da"
+                  stroke-width="0.5"
+                />
+                <line
+                  x1="225"
+                  y1="0"
+                  x2="225"
+                  y2="200"
+                  stroke="#d4e8da"
+                  stroke-width="0.5"
+                />
+                <!-- Mexico outline simplified -->
+                <path
+                  d="M20 30 L120 20 L160 50 L150 90 L110 110 L90 100 L60 80 L30 70 Z"
+                  fill="#c8e6d4"
+                  stroke="#8dc9a8"
+                  stroke-width="1.2"
+                />
+                <!-- Guatemala outline -->
+                <path
+                  d="M140 85 L165 80 L175 95 L165 115 L145 110 Z"
+                  fill="#b8ddc9"
+                  stroke="#8dc9a8"
+                  stroke-width="1.2"
+                />
+                <!-- Belize -->
+                <path
+                  d="M165 80 L178 80 L180 95 L165 95 Z"
+                  fill="#c8e6d4"
+                  stroke="#8dc9a8"
+                  stroke-width="1"
+                />
+                <!-- Honduras -->
+                <path
+                  d="M165 95 L195 90 L200 110 L170 115 Z"
+                  fill="#c8e6d4"
+                  stroke="#8dc9a8"
+                  stroke-width="1"
+                />
+                <!-- Pin 1: Southern Mexico -->
+                <circle
+                  cx="100"
+                  cy="70"
+                  r="5"
+                  fill="var(--green-primary)"
+                  opacity="0.9"
+                />
+                <circle
+                  cx="100"
+                  cy="70"
+                  r="9"
+                  fill="var(--green-primary)"
+                  opacity="0.2"
+                />
+                <!-- Pin 2: Guatemala -->
+                <circle
+                  cx="155"
+                  cy="97"
+                  r="4"
+                  fill="var(--green-primary)"
+                  opacity="0.8"
+                />
+                <circle
+                  cx="155"
+                  cy="97"
+                  r="7"
+                  fill="var(--green-primary)"
+                  opacity="0.15"
+                />
+                <!-- Labels -->
+                <text
+                  x="60"
+                  y="60"
+                  font-size="7"
+                  fill="#4a7c5e"
+                  font-family="Inter, sans-serif"
+                >
+                  El Cafre
+                </text>
+                <text
+                  x="130"
+                  y="45"
+                  font-size="6"
+                  fill="#4a7c5e"
+                  font-family="Inter, sans-serif"
+                >
+                  Guadalupe de los Cisneros
+                </text>
+                <text
+                  x="195"
+                  y="145"
+                  font-size="6"
+                  fill="#4a7c5e"
+                  font-family="Inter, sans-serif"
+                >
+                  Managua
+                </text>
+                <text
+                  x="30"
+                  y="155"
+                  font-size="6"
+                  fill="#4a7c5e"
+                  font-family="Inter, sans-serif"
+                >
+                  San Francisco
+                </text>
+                <text
+                  x="120"
+                  y="170"
+                  font-size="6"
+                  fill="#4a7c5e"
+                  font-family="Inter, sans-serif"
+                >
+                  La Cajonita
+                </text>
+                <!-- Museum point -->
+                <circle cx="108" cy="118" r="3" fill="#8dc9a8" />
+                <text
+                  x="112"
+                  y="121"
+                  font-size="5.5"
+                  fill="#4a7c5e"
+                  font-family="Inter, sans-serif"
+                >
+                  Museo El Viajero
+                </text>
+              </svg>
+            </div>
+            <div class="map-location-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                  fill="var(--green-primary)"
+                  opacity="0.8"
+                />
+                <circle cx="12" cy="9" r="2.5" fill="white" />
+              </svg>
+              Southern Mexico & Guatemala
+            </div>
+          </div>
+        </div>
+        <!-- END BOTTOM ROW -->
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="dashboard-footer">
+          <div class="footer-inner">
+            <!-- Brand -->
+            <div class="footer-brand">
+              <div class="footer-logo">
+                <span
+                  class="sidebar-logo-icon"
+                  style="width: 28px; height: 28px"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"
+                      fill="var(--green-primary)"
+                    />
+                    <path
+                      d="M12 6c0 3.31-2.69 6-6 6 3.31 0 6 2.69 6 6 0-3.31 2.69-6 6-6-3.31 0-6-2.69-6-6z"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+                <span class="footer-logo-text">AgriTree</span>
+              </div>
+              <p class="footer-copy">
+                © 2024 AgriTree Explorer. Precision in Growth.
+              </p>
+            </div>
+
+            <!-- Footer Nav -->
+            <div class="footer-nav-group">
+              <ul class="footer-nav">
+                <li><a href="#">Botanical API</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+              <ul class="footer-nav">
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Community</a></li>
+              </ul>
+            </div>
+
+            <!-- Social + Quote -->
+            <div class="footer-right">
+              <div class="footer-socials">
+                <a href="#" class="footer-social-icon" aria-label="Globe">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                    <path
+                      d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="footer-social-icon" aria-label="Chart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M18 20V10M12 20V4M6 20v-6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="footer-social-icon" aria-label="Plant">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 22V12M12 12C12 7 7 4 3 5c1 4 4 7 9 7zM12 12C12 7 17 4 21 5c-1 4-4 7-9 7z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p class="footer-quote">
+                "Nature does not hurry, yet everything is accomplished."
+              </p>
+            </div>
+          </div>
+        </footer>
+      </main>
+      <!-- END MAIN CONTENT -->
+    </div>
+    <!-- END APP WRAPPER -->
+
+    <script src="/assets/js/plant_analyzer.js"></script>
+  </body>
+</html>
